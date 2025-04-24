@@ -21,7 +21,10 @@ const OrderDetail = connection.define('OrderDetail', {
   }
 }, {
   tableName: 'order_details',
-  timestamps: true
+  timestamps: true,
+  createdAt: 'createdAt',
+  updatedAt: false
+
 });
 
 module.exports = OrderDetail;

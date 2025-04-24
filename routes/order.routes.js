@@ -7,10 +7,10 @@ const { checkJWT, isAdmin } = require('../middleware/authCheck');
 router.get('/order/list', checkJWT, isAdmin, OrderController.get);
 
 //Người dùng xem đơn hàng của họ
-router.get('/order/user/:id', checkJWT, OrderController.getByUser);
+router.get('/order/user/:user_id', checkJWT, OrderController.getByUser);
 
 //Người dùng (hoặc admin) xem chi tiết đơn hàng theo ID
-router.get('/order/:id', checkJWT, OrderController.getById);
+// router.get('/order/:id', checkJWT, OrderController.getById);
 
 //Người dùng tạo đơn hàng mới
 router.post('/order/add', checkJWT, OrderController.create);
